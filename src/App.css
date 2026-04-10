@@ -1,38 +1,135 @@
-.App {
+/* Genel Ayarlar - Arka Planı Canlandırdık */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top right, #1a1a2e, #16213e);
+  color: #e6e6e6;
+  min-height: 100vh;
+}
+
+/* Sayfa Konteynırları - Şeffaf ve Modern "Glassmorphism" Efekti */
+.auth-container, .dashboard, .analyze-section, .reports-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navigasyon Çubuğu */
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #aaa;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links button.active-nav {
+  color: #00d2ff;
+  border-bottom: 2px solid #00d2ff;
+}
+
+/* Form Elemanları */
+input, select {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   color: white;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Butonlar - Animasyona Uygun Hale Getirdik */
+.auth-btn, .run-btn {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Yükleme Alanı */
+.dropzone {
+  display: block;
+  border: 2px dashed #00d2ff;
+  padding: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: 0.3s;
 }
+
+.dropzone img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Sonuç Kartları - Neon Efekti */
+.result-card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.result-card.success {
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid #2ecc71;
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);
+}
+
+.result-card.danger {
+  background: rgba(231, 76, 60, 0.15);
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.2);
+}
+
+/* Tablo Ayarları */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-success { color: #2ecc71; }
+.text-danger { color: #e74c3c; }
+.accuracy-box {
+  background: rgba(0, 210, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #00d2ff;
+  margin-bottom: 20px;
+}
+.accuracy-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00d2ff;
+}
+.btn-group { display: flex; gap: 10px; justify-content: center; }
+.btn-ok { background: #2ecc71; border: none; color: white; border-radius: 5px; cursor: pointer; }
+.btn-no { background: #e74c3c; border: none; color: white; border-radius: 5px; cursor: pointer; }
+.badge-success { color: #2ecc71; font-weight: bold; }
+.badge-danger { color: #e74c3c; font-weight: bold; }
