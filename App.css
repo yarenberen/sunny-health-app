@@ -116,3 +116,20 @@ th, td {
 
 .text-success { color: #2ecc71; }
 .text-danger { color: #e74c3c; }
+.accuracy-box {
+  background: rgba(0, 210, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #00d2ff;
+  margin-bottom: 20px;
+}
+.accuracy-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00d2ff;
+}
+.btn-group { display: flex; gap: 10px; justify-content: center; }
+.btn-ok { background: #2ecc71; border: none; color: white; border-radius: 5px; cursor: pointer; }
+.btn-no { background: #e74c3c; border: none; color: white; border-radius: 5px; cursor: pointer; }
+.badge-success { color: #2ecc71; font-weight: bold; }
+.badge-danger { color: #e74c3c; font-weight: bold; }
